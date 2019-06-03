@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--Message List Table View Controller-->
         <scene sceneID="yuX-lQ-k9e">
             <objects>
-                <tableViewController id="mYP-Qz-Fo8" sceneMemberID="viewController">
+                <tableViewController id="mYP-Qz-Fo8" customClass="MessageListTableViewController" customModule="CKBulletinBoard" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="VxX-PZ-xJb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,6 +38,9 @@
                                             <state key="normal" title="Post">
                                                 <color key="titleColor" red="0.047711648046970367" green="0.063766777515411377" blue="0.019490590319037437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </state>
+                                            <connections>
+                                                <action selector="postMessageButtonTapped:" destination="mYP-Qz-Fo8" eventType="touchUpInside" id="MWj-Vt-0pe"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </stackView>
@@ -82,6 +85,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="ILn-Iw-JWF"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="pZc-pG-n8x" id="Eiw-CK-4en"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="akh-dt-MLE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

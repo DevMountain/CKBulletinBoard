@@ -11,6 +11,10 @@
 		FBEB0F9A22A54A240094F3E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBEB0F9822A54A240094F3E9 /* Main.storyboard */; };
 		FBEB0F9C22A54A250094F3E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBEB0F9B22A54A250094F3E9 /* Assets.xcassets */; };
 		FBEB0F9F22A54A250094F3E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FBEB0F9D22A54A250094F3E9 /* LaunchScreen.storyboard */; };
+		FBEB0FA822A54E350094F3E9 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEB0FA722A54E350094F3E9 /* Message.swift */; };
+		FBEB0FAD22A54E590094F3E9 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBEB0FAC22A54E590094F3E9 /* CloudKit.framework */; };
+		FBEB0FAF22A557E70094F3E9 /* MessageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEB0FAE22A557E70094F3E9 /* MessageController.swift */; };
+		FBEB0FB222A55C8F0094F3E9 /* MessageListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBEB0FB122A55C8F0094F3E9 /* MessageListTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +24,11 @@
 		FBEB0F9B22A54A250094F3E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FBEB0F9E22A54A250094F3E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FBEB0FA022A54A250094F3E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FBEB0FA722A54E350094F3E9 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		FBEB0FAA22A54E490094F3E9 /* CKBulletinBoard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CKBulletinBoard.entitlements; sourceTree = "<group>"; };
+		FBEB0FAC22A54E590094F3E9 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		FBEB0FAE22A557E70094F3E9 /* MessageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageController.swift; sourceTree = "<group>"; };
+		FBEB0FB122A55C8F0094F3E9 /* MessageListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +36,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBEB0FAD22A54E590094F3E9 /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +48,7 @@
 			children = (
 				FBEB0F9322A54A240094F3E9 /* CKBulletinBoard */,
 				FBEB0F9222A54A240094F3E9 /* Products */,
+				FBEB0FAB22A54E590094F3E9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +63,10 @@
 		FBEB0F9322A54A240094F3E9 /* CKBulletinBoard */ = {
 			isa = PBXGroup;
 			children = (
+				FBEB0FAA22A54E490094F3E9 /* CKBulletinBoard.entitlements */,
+				FBEB0FB322A55C9D0094F3E9 /* View Controller */,
+				FBEB0FB022A557ED0094F3E9 /* Controllers */,
+				FBEB0FA922A54E390094F3E9 /* Model */,
 				FBEB0FA622A54D180094F3E9 /* Resources */,
 				FBEB0F9822A54A240094F3E9 /* Main.storyboard */,
 			);
@@ -67,6 +82,38 @@
 				FBEB0FA022A54A250094F3E9 /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		FBEB0FA922A54E390094F3E9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FBEB0FA722A54E350094F3E9 /* Message.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FBEB0FAB22A54E590094F3E9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBEB0FAC22A54E590094F3E9 /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FBEB0FB022A557ED0094F3E9 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FBEB0FAE22A557E70094F3E9 /* MessageController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		FBEB0FB322A55C9D0094F3E9 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FBEB0FB122A55C8F0094F3E9 /* MessageListTableViewController.swift */,
+			);
+			path = "View Controller";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -101,6 +148,14 @@
 				TargetAttributes = {
 					FBEB0F9022A54A240094F3E9 = {
 						CreatedOnToolsVersion = 10.2.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -141,6 +196,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				FBEB0F9522A54A240094F3E9 /* AppDelegate.swift in Sources */,
+				FBEB0FAF22A557E70094F3E9 /* MessageController.swift in Sources */,
+				FBEB0FA822A54E350094F3E9 /* Message.swift in Sources */,
+				FBEB0FB222A55C8F0094F3E9 /* MessageListTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +344,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CKBulletinBoard/CKBulletinBoard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4J7B9732LY;
 				INFOPLIST_FILE = "$(SRCROOT)/CKBulletinBoard/Resources/Info.plist";
@@ -304,6 +363,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = CKBulletinBoard/CKBulletinBoard.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4J7B9732LY;
 				INFOPLIST_FILE = "$(SRCROOT)/CKBulletinBoard/Resources/Info.plist";
